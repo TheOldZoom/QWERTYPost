@@ -41,7 +41,7 @@ h1{
     padding-bottom: 30px;
 
 }
-form-saisie span{
+.form-saisie span{
     font-size: 14px;
     font-weight: bold;
 }

@@ -17,7 +17,7 @@
             <li class="nav-item"><a href="login">login</a></li>
             <li class="nav-item"><a href="signup">sign up</a></li>
             
-            </ul>e
+            </ul>
         </nav>
 </body>
 </html>

@@ -1,3 +1,8 @@
+<?php
+require('actions/signupaction.php')
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -14,8 +19,9 @@
         <div class="form-text">inscription        </div>
             <div class="form-saisie">
 
-                <form method="post" action="process.php">
+                <form method="post">
                     <span>Nom et prénom </span>
+<<<<<<< Updated upstream
                     <input type="text" name="name" required placeholder="Taper votre nom et prénom">
                     <span>Nom d'utilisateur </span>
                     <input type="text" name="username" required placeholder="Taper votre nom d'utilisateur">
@@ -23,6 +29,20 @@
                     <input type="password" name="password" required placeholder="Taper votre mot de passe">
                     <input type="submit" name="signup"  value="s'inscrire" class="btnsubmit">
                     Vous avez deja un compte ?         <a href="./login.php">   Connecter-vous</a>
+=======
+                    <input type="text" name="nom"  placeholder="Taper votre nom et prénom">
+                    <span>Nom d'utilisateur </span>
+                    <input type="text" name="pseudo"  placeholder="Taper votre nom d'utilisateur">
+                    <span>Mot de passe: </span>
+                    <input type="password" name="mdp" placeholder="Taper votre mot de passe">
+                    <?php if(isset($errormsg)){
+                        echo '<h500>'.$errormsg.'</h500>';
+                    } 
+                    
+                    ?>
+                    
+                    <input type="submit" name="signup"  value="s'inscrire" class="btnsubmit">Vous avez deja un compte?<a href="./login.php">   Connecter-vous</a>
+>>>>>>> Stashed changes
                     
                 </form>
             </div>
