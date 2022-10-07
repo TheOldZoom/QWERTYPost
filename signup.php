@@ -21,7 +21,7 @@ require('actions/signupaction.php')
 
                 <form method="post">
                     <span>Nom et prénom </span>
-<<<<<<< Updated upstream
+
                     <input type="text" name="name" required placeholder="Taper votre nom et prénom">
                     <span>Nom d'utilisateur </span>
                     <input type="text" name="username" required placeholder="Taper votre nom d'utilisateur">
@@ -29,7 +29,6 @@ require('actions/signupaction.php')
                     <input type="password" name="password" required placeholder="Taper votre mot de passe">
                     <input type="submit" name="signup"  value="s'inscrire" class="btnsubmit">
                     Vous avez deja un compte ?         <a href="./login.php">   Connecter-vous</a>
-=======
                     <input type="text" name="nom"  placeholder="Taper votre nom et prénom">
                     <span>Nom d'utilisateur </span>
                     <input type="text" name="pseudo"  placeholder="Taper votre nom d'utilisateur">
@@ -42,7 +41,6 @@ require('actions/signupaction.php')
                     ?>
                     
                     <input type="submit" name="signup"  value="s'inscrire" class="btnsubmit">Vous avez deja un compte?<a href="./login.php">   Connecter-vous</a>
->>>>>>> Stashed changes
                     
                 </form>
             </div>

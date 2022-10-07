@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-=======
+
 <?php
 require('actions/database.php');
 
@@ -37,4 +36,4 @@ if(isset($_POST['signup'])){
 }
 
 ?>
->>>>>>> Stashed changes
+
