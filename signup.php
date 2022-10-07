@@ -16,13 +16,18 @@
 
                 <form method="post" action="process.php">
                     <span>Nom et prénom </span>
-                    <input type="text" name="name" required placeholder="Taper votre nom et prénom">
+                    <input type="text" name="nom" required placeholder="Taper votre nom et prénom">
                     <span>Nom d'utilisateur </span>
-                    <input type="text" name="username" required placeholder="Taper votre nom d'utilisateur">
+                    <input type="text" name="pseudo" required placeholder="Taper votre nom d'utilisateur">
                     <span>Mot de passe: </span>
-                    <input type="password" name="password" required placeholder="Taper votre mot de passe">
-                    <input type="submit" name="signup"  value="s'inscrire" class="btnsubmit">
-                    Vous avez deja un compte ?         <a href="./login.php">   Connecter-vous</a>
+                    <input type="password" name="mdp" required placeholder="Taper votre mot de passe">
+                    <?php if(isset($errormsg)){
+                        echo $errormsg;
+                    } 
+                    
+                    ?>
+                    
+                    <input type="submit" name="signup"  value="s'inscrire" class="btnsubmit">Vous avez deja un compte?<a href="./login.php">   Connecter-vous</a>
                     
                 </form>
             </div>
