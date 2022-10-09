@@ -1,5 +1,6 @@
 
 <?php
+
 require('actions/database.php');
 
 
@@ -25,12 +26,23 @@ if(isset($_POST['signup'])){
 
 
 
+            $getinfosuser = $bdd->prepare('SELECT id, pseudo, nom FROM users WHERE pseudo = ? AND nom = ?');
+            $getinfosuser->execute(array($user_pseudo,$user_nom));
+
+
+            $userinfos = $getinfosuser->fetch();
+            $_SESSION['auth'] = true;
+            $_SESSION['id'] = $userinfos['id'];
+            $_SESSION['pseudo'] = $userinfos['pseudo'];
+            $_SESSION['nom'] = $userinfos['nom'];
+            header('location: post-questions');
+
         }else{
             $errormsg = "L'utilisateur existe déja dans notre base de données"; 
         }
 
     }else{
-        $errormsg = "Veuillez compléter tout les champs";
+        $errormsg = "Veuillez compléter tous les champs";
     }
 
 }
