@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include_once 'php/nav.php';
 ?>
 <!DOCTYPE html>

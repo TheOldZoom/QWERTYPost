@@ -1,4 +1,6 @@
 <?php
+require('actions/users/signupaction.php');
+require('actions/users/doublesecurityaction.php');
 require('php/nav.php')
 
 ?>
@@ -47,5 +49,5 @@ require('php/nav.php')
 </html>
 
 <?php
-require('actions/users/signupaction.php')
+
 ?>

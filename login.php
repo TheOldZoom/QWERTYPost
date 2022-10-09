@@ -1,5 +1,6 @@
 <?php
 require('actions/users/loginaction.php');
+require('actions/users/doublesecurityaction.php');
 
 include_once ('php/nav.php');
 ?>

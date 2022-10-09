@@ -12,7 +12,7 @@
 </html>
 
 <?php
-
+    session_start();
 require('php/nav.php');
 
 
