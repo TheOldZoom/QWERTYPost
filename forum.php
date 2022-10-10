@@ -11,6 +11,7 @@
 </head>
 <body>
 <?php
+    session_start();
 require('actions/forum/allquestionaction.php');
 require('php/nav.php');
 
@@ -26,7 +27,7 @@ require('php/nav.php');
     while($q = $getAllQuestions->fetch()){
         ?>
         <div class="content">
-            <span>Titre:</span> <?= $q['title'];?>
+            <a href="question?id=<?php echo $q['id'];?>"><?= $q['title'];?></a>
             <div class="footer">
             <?= $q['princ'];?>
             </div>

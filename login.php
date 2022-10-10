@@ -1,4 +1,5 @@
 <?php
+session_start();
 require('actions/users/loginaction.php');
 require('actions/users/doublesecurityaction.php');
 
