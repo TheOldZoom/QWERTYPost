@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,15 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include 'php/nav.php'?>
+    
 </body>
 </html>
+
+<?php
+$var = 'contact';
+    session_start();
+require('php/nav.php');
+
+
+?>
+

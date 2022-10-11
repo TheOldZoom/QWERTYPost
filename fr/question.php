@@ -3,7 +3,7 @@
     require('actions/forum/showquestion.php');
     require('actions/forum/postansweraction.php'); 
     require('actions/forum/showallanswerofthisquestionaction.php');
-
+    $var = 'question';
 ?>
 
 <!DOCTYPE html>

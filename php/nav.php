@@ -14,17 +14,8 @@
 
         <nav>
             <ul class="nav-list">
-            <li class="nav-item"><a href="index">home</a></li>
-            <li class="nav-item"><a href="forum">forum</a></li>
-            <li class="nav-item"><a href="post-questions">publier une question</a></li>
-            <li class="nav-item"><a href="contact">contact</a></li>
-            <?php if( isset($_SESSION['id']) && $_SESSION['pseudo'] !== null ) : ?>
-                <li class="nav-item"><a href="actions/users/logoutaction.php">déconnexion</a></li>
-  <?php else : ?>
-    <li class="nav-item"><a href="login">login</a></li>
-    <li class="nav-item"><a href="signup">sign up</a></li>
-  <?php endif; ?>
-            
+            <li class="nav-item"><a href="./fr/index">français</a></li>
+            <li class="nav-item"><a href="./en/index">english</a></li>
             </ul>
         </nav>
 </body>

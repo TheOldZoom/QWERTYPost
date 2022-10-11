@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: #ffff;
+    background: linear-gradient(#0f2ba7, #FF00FF );
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+
+}
+h1{
+    color: #595961    ;
+    font-size: 13px;
+    text-align: center;
+}
+.FormInscrs{
+    width: 400px;
+    height: 570px;
+    background-color: #1f1f22;
+    position:absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 30px;
+    border-radius: 7px;
+    border-top: 4px solid #FF00FF;
+    border-bottom: 4px solid #0f2ba7;
+}
+.form-text{
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 30px;
+
+}
+.form-saisie span{
+    font-size: 14px;
+    font-weight: bold;
+}
+.form-saisie input{
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    background-color: #1f1f22;
+    color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+.form-saisie input[type="submit"].btnsubmit{
+    width: 100%;
+    font-size: 18px;
+    background-color: #0f2ba7;
+    color: #fff;
+    margin: 200x 0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.form-saisie input[type="submit"].btnsubmit:hover{
+    background-color: #0f2ba7;
+    width: 100%;
+    font-size: 20px;
+
+}
+.form-saisie a{
+    font-size: 14px;
+    font-weight: bold;
+    color: #1d4adb;
+}

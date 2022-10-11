@@ -1,4 +1,5 @@
 <?php
+$var = 'login';
 session_start();
 require('actions/users/loginaction.php');
 require('actions/users/doublesecurityaction.php');
@@ -20,14 +21,14 @@ include_once ('php/nav.php');
 <body>
 
 <div class="FormInscrs">
-        <div class="form-text">Connexion</div>
+        <div class="form-text">Log in</div>
             <div class="form-saisie">
 
                 <form method="post">
-                    <span>Nom d'utilisateur </span>
-                    <input type="text" name="pseudo"placeholder="Taper votre nom d'utilisateur">
-                    <span>Mot de passe: </span>
-                    <input type="password" name="mdp" placeholder="Taper votre mot de passe">
+                    <span>Username</span>
+                    <input type="text" name="pseudo"placeholder="Type your username">
+                    <span>password</span>
+                    <input type="password" name="mdp" placeholder="Type your password">
                     <input type="submit" name="login"  value="Se connecter" class="btnsubmit">
                     Vous avez pas de compte ?         <a href="./signup">Inscrivez-vous</a>
                     <?php if(isset($errormsg)){

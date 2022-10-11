@@ -12,6 +12,7 @@
 </html>
 
 <?php
+$var = 'contact';
     session_start();
 require('php/nav.php');
 

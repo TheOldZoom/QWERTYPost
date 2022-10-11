@@ -1,0 +1,31 @@
+.show-answer textarea{
+    width: 100%;
+    height: 59px;
+    font-size: 16px;
+    outline: none;
+    background-color: #1f1f22;
+    color: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    resize: none;
+}
+.content {
+    background: rgba(3, 4, 70, 0.384);
+    padding: 10px;
+    margin: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    color: white;
+  }
+  
+  /* Style the footer */
+  .footer {
+    background-color: #0d0629;
+    padding: 10px;
+  }
+  .footer2 {
+    background-color: #0d0629;
+    margin: 0;
+  }
