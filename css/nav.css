@@ -7,6 +7,14 @@
     text-decoration: none;
 
 }
+
+.QP{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
 .nav-list {
     padding: 1rem 0;
     display: flex;
