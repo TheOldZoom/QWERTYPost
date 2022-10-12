@@ -11,7 +11,7 @@ require ('actions/database.php');
 
 
             $insertanswer = $bdd->prepare('INSERT INTO answers(id_author, author, id_q, date, answer) VALUES(?,?,?,?,?)');
-            $insertanswer->execute(array($_SESSION['id'], $_SESSION['pseudo'], $_GET['id'], $date, $_POST['answer']));
+            $insertanswer->execute(array($_SESSION['id'], $_SESSION['pseudo'], $_GET['id'], $date, $user_answer));
 
         }
     }
