@@ -24,6 +24,11 @@
     <li class="nav-item"><a href="login">Se connecter</a></li>
     <li class="nav-item"><a href="signup">S'inscrire</a></li>
   <?php endif; ?>
+  <?php if(isset($_SESSION['ready']) !== 1 ) : ?>
+  <?php else : ?>
+    <li class="nav-item"><a>Votre compte n'a pas été vérifier</a></li>
+
+  <?php endif; ?>
             
             </ul>
         </nav>

@@ -1,7 +1,11 @@
 
 <?php
-
 require('actions/database.php');
+
+require "actions/users/PHPMailer/PHPMailerAutoload.php";
+
+
+
 
 
 if(isset($_POST['signup'])){
@@ -13,25 +17,27 @@ if(isset($_POST['signup'])){
 
                 $user_pseudo = htmlspecialchars($_POST['pseudo']);
                 $user_nom = htmlspecialchars($_POST['nom']);
+                $user_email = htmlspecialchars($_POST['email']);
                 $user_mdp = password_hash($_POST['mdp'], PASSWORD_DEFAULT);
+                $token = rand(2000, 40000);
 
 
 
-                $checkifuserexist = $bdd->prepare('SELECT pseudo FROM users WHERE pseudo = ?');
-                $checkifuserexist->execute(array($user_pseudo));
+                $checkifuserexist = $bdd->prepare('SELECT pseudo, email FROM users WHERE pseudo = ? AND email = ?');
+                $checkifuserexist->execute(array($user_pseudo, $user_email));
 
 
 
                 if($checkifuserexist->rowCount() == 0){
 
-                    $insertuser = $bdd->prepare('INSERT INTO users(pseudo, nom, mdp)VALUES (?, ?, ?)');
+                    $insertuser = $bdd->prepare('INSERT INTO users(pseudo, nom, email, token, ready, mdp)VALUES (?, ?, ?, ?, ?, ?)');
 
-                    $insertuser->execute(array($user_pseudo, $user_nom, $user_mdp));
+                    $insertuser->execute(array($user_pseudo, $user_nom, $user_email, $token, 0, $user_mdp));
 
 
 
-                    $getinfosuser = $bdd->prepare('SELECT id, pseudo, nom FROM users WHERE pseudo = ? AND nom = ?');
-                    $getinfosuser->execute(array($user_pseudo,$user_nom));
+                    $getinfosuser = $bdd->prepare('SELECT * FROM users WHERE pseudo = ? AND nom = ? AND email = ?');
+                    $getinfosuser->execute(array($user_pseudo,$user_nom,$user_email));
 
 
                     $userinfos = $getinfosuser->fetch();
@@ -39,7 +45,46 @@ if(isset($_POST['signup'])){
                     $_SESSION['id'] = $userinfos['id'];
                     $_SESSION['pseudo'] = $userinfos['pseudo'];
                     $_SESSION['nom'] = $userinfos['nom'];
-                    header('location: post-questions');
+                    $_SESSION['ready'] = $userinfos['ready'];
+
+                    function smtpmailer($to, $from, $from_name, $subject, $body)
+                    {
+                        $mail = new PHPMailer();
+                        $mail->IsSMTP();
+                        $mail->SMTPAuth = true; 
+                
+                        $mail->SMTPSecure = 'ssl'; 
+                        $mail->Host = 'smtp.gmail.com';
+                        $mail->Port = 465;  
+                        $mail->Username = 'QwertyPost.Contact@gmail.com';
+                        $mail->Password = 'ozyjrrptkyimabzi';   
+                
+                //   $path = 'reseller.pdf';
+                //   $mail->AddAttachment($path);
+                
+                        $mail->IsHTML(true);
+                        $mail->From="Qwertypost.contact@gmail.com";
+                        $mail->FromName=$from_name;
+                        $mail->Sender=$from;
+                        $mail->AddReplyTo($from, $from_name);
+                        $mail->Subject = $subject;
+                        $mail->Body = $body;
+                        $mail->AddAddress($to);
+                        $mail->send();
+                    }
+                    
+                    $to   = $user_email;
+                    $from = 'qwertypost.contact@gmail.com';
+                    $name = 'QwertyPost Service';
+                    $subj = 'Confirmation par Email QwertyPost';
+                    $msg = 'http://qwertypost.com/verif?id='.$_SESSION['id'].'&rtoken='.$token;
+                    
+                    $error=smtpmailer($to,$from, $name ,$subj, $msg);
+    
+
+
+
+
 
                 }else{
                     $errormsg = "L'utilisateur existe déja dans notre base de données"; 
