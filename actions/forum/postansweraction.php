@@ -7,7 +7,7 @@ require ('actions/database.php');
         if(!empty($_POST['answer'])){
             
             $user_answer = nl2br(htmlspecialchars($_POST['answer']));
-            $date = date('d/m/y');
+            $date = date('Y-m-d H:i:s');
 
 
             $insertanswer = $bdd->prepare('INSERT INTO answers(id_author, author, id_q, date, answer) VALUES(?,?,?,?,?)');

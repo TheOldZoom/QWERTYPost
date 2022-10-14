@@ -23,14 +23,14 @@ require('php/nav.php')
         <div class="form-text">inscription        </div>
             <div class="form-saisie">
 
-                <form method="post">
+                <form method="post" enctype="multipart/form-data">
                     <span>Nom et prénom </span>
 
                     <input type="text" name="nom" placeholder="Taper votre nom et prénom">
                     <span>Nom d'utilisateur </span>
                     <input type="text" name="pseudo" placeholder="Taper votre nom d'utilisateur">
                     <span>Email</span>
-                    <input type="text" name="email" placeholder="Taper votre addresse mail">
+                    <input type="email" name="email" placeholder="Taper votre addresse mail">
                     <span>Mot de passe: </span>
                     <input type="password" name="mdp" placeholder="Taper votre mot de passe">
                     <input type="submit" name="signup"  value="s'inscrire" class="btnsubmit">
