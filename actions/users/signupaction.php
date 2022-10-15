@@ -24,10 +24,14 @@ if(isset($_POST['signup'])){
 
 
 
-                $checkifuserexist = $bdd->prepare('SELECT pseudo, email FROM users WHERE pseudo = ? AND email = ?');
-                $checkifuserexist->execute(array($user_pseudo, $user_email));
+                $checkifuserexist = $bdd->prepare('SELECT * FROM users WHERE pseudo = ?');
+                $checkifuserexist->execute(array($user_pseudo));
+                $checkifemailexist = $bdd->prepare('SELECT * FROM users WHERE email = ?');
+                $checkifemailexist->execute(array($user_email));
 
                         if($checkifuserexist->rowCount() == 0){
+
+                            if($checkifemailexist->rowCount() == 0){
 
                             $insertuser = $bdd->prepare('INSERT INTO users(pseudo, nom, email, token, ready, mdp)VALUES (?, ?, ?, ?, ?, ?)');
         
@@ -56,7 +60,8 @@ if(isset($_POST['signup'])){
                                 $mail->Host = 'smtp.gmail.com';
                                 $mail->Port = 465;  
                                 $mail->Username = 'QwertyPost.Contact@gmail.com';
-                                $mail->Password = 'ozyjrrptkyimabzi';   
+                                $mail->Password = 'iowkkycnrpsuiuja
+                                ';   
                         
                         //   $path = 'reseller.pdf';
                         //   $mail->AddAttachment($path);
@@ -79,17 +84,21 @@ if(isset($_POST['signup'])){
                             $msg = 'http://qwertypost.com/verif?id='.$_SESSION['id'].'&token='.$token;
                             
                             $error=smtpmailer($to,$from, $name ,$subj, $msg);
-                            
-                            }else{
-                            $errormsg = "L'utilisateur existe déja dans notre base de données"; 
-                            }
-                    
-                        }else{
-                        $errormsg = "Veuillez compléter tous les champs";
-                         }
-            
 
+                            }else{
+                                $errormsg = "L'email existe déja";
+                            }
+                            
+                    }else{
+                    $errormsg = "L'utilisateur existe déja dans notre base de données"; 
+                    }
+                    
+            }else{
+            $errormsg = "Veuillez compléter tous les champs";
             }
+            
+                     
+}
 
 ?>
 

@@ -16,7 +16,10 @@
             <ul class="nav-list">
             <li class="nav-item"><a href="index">Accueil</a></li>
             <li class="nav-item"><a href="forum">Forum</a></li>
-            <li class="nav-item"><a href="post-questions">Publier une question</a></li>
+            <?php if( isset($_SESSION['id']) && $_SESSION['pseudo'] !== null ) : ?>
+                <li class="nav-item"><a href="post-questions">Publier une question</a></li>
+  <?php else : ?>
+  <?php endif; ?>
             <li class="nav-item"><a href="contact">Contact</a></li>         
             <?php if( isset($_SESSION['id']) && $_SESSION['pseudo'] !== null ) : ?>
                 <li class="nav-item"><a href="actions/users/logoutaction.php">Déconnexion</a></li>
