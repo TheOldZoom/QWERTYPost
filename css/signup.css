@@ -78,3 +78,10 @@ h1{
     font-weight: bold;
     color: #1d4adb;
 }
+
+p{
+    font-size: 14px;
+    font-weight: 600;
+    text-align: right;
+
+}

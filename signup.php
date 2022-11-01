@@ -7,6 +7,7 @@ require('php/nav.php')
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -18,6 +19,7 @@ require('php/nav.php')
     <title>QwertyPost | Signup</title>
 </head>
 <body>
+<script src="./signup1.js"></script>
 
 <div class="FormInscrs">
         <div class="form-text">inscription        </div>
@@ -25,14 +27,17 @@ require('php/nav.php')
 
                 <form method="post" enctype="multipart/form-data">
                     <span>Nom et prénom </span>
-
-                    <input type="text" name="nom" placeholder="Taper votre nom et prénom">
+        
+                    <input id="nom" type="text" name="nom" placeholder="Taper votre nom et prénom">
+                    <p id="0/10"></p> 
                     <span>Nom d'utilisateur </span>
-                    <input type="text" name="pseudo" placeholder="Taper votre nom d'utilisateur">
+                    <input id="pseudo" type="text" name="pseudo" placeholder="Taper votre nom d'utilisateur">
+                    <p id="0/20"></p> 
                     <span>Email</span>
-                    <input type="email" name="email" placeholder="Taper votre addresse mail">
+                    <input id="email" type="email" name="email" placeholder="Taper votre addresse mail">
                     <span>Mot de passe: </span>
-                    <input type="password" name="mdp" placeholder="Taper votre mot de passe">
+                    <input id="password" type="password" name="mdp" placeholder="Taper votre mot de passe">
+                    <p id="0/30"></p> 
                     <input type="submit" name="signup"  value="s'inscrire" class="btnsubmit">
                     Vous avez deja un compte ?         <a href="./login.php">   Connecter-vous</a>
                     <?php if(isset($errormsg)){
@@ -44,6 +49,8 @@ require('php/nav.php')
                     
                 </form>
             </div>
+
+
 
 
 
