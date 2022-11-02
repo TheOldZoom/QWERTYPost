@@ -3,7 +3,7 @@
     height: 59px;
     font-size: 16px;
     outline: none;
-    background-color: #1f1f22;
+    background: linear-gradient(to right, #0a2444 , #061c41);
     color: #fff;
     margin: 10px 0;
     padding: 10px;

@@ -13,7 +13,7 @@ if(isset($_POST['signup'])){
 
 
 
-            if(!empty($_POST['pseudo']) AND !empty($_POST['nom']) AND !empty($_POST['mdp'])){
+            if(!empty($_POST['pseudo']) AND !empty($_POST['nom']) AND !empty($_POST['mdp']) AND !empty($_POST['email'])){
 
                 $user_pseudo = htmlspecialchars($_POST['pseudo']);
                 $user_nom = htmlspecialchars($_POST['nom']);

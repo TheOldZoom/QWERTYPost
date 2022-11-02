@@ -8,8 +8,8 @@ body{
     font-family: sans-serif;
     font-size: 16px;
     color: #ffff;
-    background: linear-gradient(#0f2ba7, #FF00FF );
     height: 100vh;
+    background: linear-gradient(to right, #0a2444 , #061c41);
     background-size: cover;
     background-position: center;
 
@@ -20,8 +20,8 @@ h1{
     text-align: center;
 }
 .FormInscrs{
-    width: 400px;
-    height: 570px;
+    width: 800px;
+    
     background-color: #1b1b2e ;
     position:absolute;
     margin: auto;
