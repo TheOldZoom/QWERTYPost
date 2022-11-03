@@ -31,6 +31,7 @@ include_once ('php/nav.php');
                     <input type="password" name="mdp" placeholder="Taper votre mot de passe">
                     <input type="submit" name="login"  value="Se connecter" class="btnsubmit">
                     Vous avez pas de compte ?         <a href="./signup">Inscrivez-vous</a>
+                    <a href="./loginadmin">Connectez-vous en tant qu'admin</a>
                     <?php if(isset($errormsg)){
                         echo '<h500>'.$errormsg.'</h500>';
                     } 
