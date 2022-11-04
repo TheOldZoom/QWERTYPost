@@ -33,9 +33,9 @@ if(isset($_POST['signup'])){
 
                             if($checkifemailexist->rowCount() == 0){
 
-                            $insertuser = $bdd->prepare('INSERT INTO users(pseudo, nom, email, token, ready, mdp)VALUES (?, ?, ?, ?, ?, ?)');
+                            $insertuser = $bdd->prepare('INSERT INTO users(pseudo, nom, email, token, ready, mdp, user)VALUES (?, ?, ?, ?, ?, ?, ?)');
         
-                            $insertuser->execute(array($user_pseudo, $user_nom, $user_email, $token, 0, $user_mdp));
+                            $insertuser->execute(array($user_pseudo, $user_nom, $user_email, $token, 0, $user_mdp, 0));
         
         
         
@@ -48,6 +48,7 @@ if(isset($_POST['signup'])){
                             $_SESSION['id'] = $userinfos['id'];
                             $_SESSION['pseudo'] = $userinfos['pseudo'];
                             $_SESSION['nom'] = $userinfos['nom'];
+                            $_SESSION['user'] = $userinfos['user'];
 
         
                             function smtpmailer($to, $from, $from_name, $subject, $body)
