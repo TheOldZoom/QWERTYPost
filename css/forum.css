@@ -1,39 +1,87 @@
+/* global */
+
 *{
     box-sizing: border-box;
 }
 
-body{
-    margin: 0;
-    padding: 0;
+html{
+    font-size: 14px;
     font-family: sans-serif;
-    font-size: 16px;
-    background: linear-gradient(to right, #0a2444 , #061c41);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-attachment: local scroll;;
-    color: #ffff;
-    list-style: none;
-    text-decoration: none;
-    
-
+    background-color: rgb(0, 0, 0   );
+    color: #FEFEFEFE;
 }
-.content {
-    background: rgba(3, 4, 70, 0.384);
-    padding: 10px;
-    margin: 20px;
-    margin-left: 200px;
-    margin-right: 200px;
-    color: white;
-  }
-  
-  /* Style the footer */
-  .footer {
-    background-color: #0d0629;
-    padding: 10px;
-  }
-  .footer2 {
-    background-color: #0d0629;
-    margin: 0;
-  }
 
+.subform a{
+    color: #FF0042;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+h1{
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.container {
+    margin: 20px;
+    padding: 20px;
+}
+
+.subform {
+    margin-top:70px;
+}
+.subform-title {
+    background-color: #292b2e;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 4px;
+}
+.subform-row {
+    display: grid;
+    grid-template-columns: 7% 60% 13% 20%;
+}
+.subform-column{
+    padding: 10px;
+    margin: 4px;
+    border-radius: 5px;
+    background-color: #111314;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subform-icon i{
+    font-size: 45px;
+}
+
+@media screen and (max-width: 460px){
+    .container {
+        margin: 10px;
+    }
+    .subform-row {
+        display: grid;
+        grid-template-columns: 25% 75%;
+        grid-template-rows: 65% 35%;
+    }
+    
+}
+
+@media screen and (min-width: 460px) AND (max-width:1024){
+    .container{
+        margin: 15px;
+        padding: 15px;
+    }
+    .subform-row{
+        grid-template-columns: 10% 60% 10% 20%;
+    }
+    .subform-icon i{
+        font-size: 30px;
+    }
+    html {
+        font-size: 16px;
+    }
+    h1{
+        font-size: 18px;
+    }
+}

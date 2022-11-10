@@ -23,6 +23,7 @@ if(isset($_POST['login'])){
                 $_SESSION['id'] = $userinfos['id'];
                 $_SESSION['pseudo'] = $userinfos['pseudo'];
                 $_SESSION['nom'] = $userinfos['nom'];
+                $_SESSION['user'] = $userinfos['user'];
 
                 header('location: post-questions');
             }else{

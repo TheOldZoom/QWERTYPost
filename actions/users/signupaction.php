@@ -61,8 +61,7 @@ if(isset($_POST['signup'])){
                                 $mail->Host = 'smtp.gmail.com';
                                 $mail->Port = 465;  
                                 $mail->Username = 'QwertyPost.Contact@gmail.com';
-                                $mail->Password = 'iowkkycnrpsuiuja
-                                ';   
+                                $mail->Password = 'zsafnaroxxhkrsfa';   
                         
                         //   $path = 'reseller.pdf';
                         //   $mail->AddAttachment($path);

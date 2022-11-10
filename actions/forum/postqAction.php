@@ -8,7 +8,7 @@ if(isset($_POST['postq'])){
 
         $q_title = htmlspecialchars($_POST['title']);
         $q_princ = nl2br(htmlspecialchars($_POST['princ']));
-        $q_date  = date('Y-m-d H:i:s');
+        $q_date  = date('Y-m-d | H:i:s');
         $q_id_author = $_SESSION['id'];
         $q_author = $_SESSION['pseudo'];
 
