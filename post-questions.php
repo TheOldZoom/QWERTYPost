@@ -4,7 +4,7 @@ $var = 'post-questions';
 session_start();
 require ('actions/forum/postqAction.php');
 require ('actions/users/securityaction.php');
-
+require ('php/preloader.php');
 include 'php/nav.php'
 
 ?>

@@ -1,6 +1,9 @@
 <?php    $var = 'index';
     session_start();
-    include_once 'php/nav.php';
+
+    require 'php/nav.php';
+    require ('php/preloader.php');
+
 
 ?>
 <!DOCTYPE html>
@@ -13,6 +16,9 @@
     <title>QwertyPost | Index</title>
 </head>
 <body>
+    <?php
+
+        ?>
 
 </body>
 </html>

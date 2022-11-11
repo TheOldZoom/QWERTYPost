@@ -3,7 +3,7 @@ $var = 'login';
 session_start();
 require('actions/users/loginaction.php');
 require('actions/users/doublesecurityaction.php');
-
+require ('php/preloader.php');
 include_once ('php/nav.php');
 ?>
 

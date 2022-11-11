@@ -14,6 +14,7 @@
     session_start();
     $var = 'forum';
 require('actions/forum/allquestionaction.php');
+require ('php/preloader.php');
 require('php/nav.php');
 ?>
 

@@ -1,6 +1,7 @@
 <?php
 session_start();
 require('actions/database.php');
+require ('php/preloader.php');
 include 'php/nav.php';
 if(isset($_GET['id']) AND !empty($_GET['id']) AND isset($_GET['token']) AND !empty($_GET['token'])){
 
